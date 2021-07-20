@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--  단독 사용  -->
+    <h1>Welcome {{name}}</h1>
+
+    <!--  if문  -->
+    {% if auth == 200 %}
+    <h1>Welcome {{name}}</h1>
+    {% else %}
+    <h1>잘못된 접근</h1>
+    {% endif %}
+
+    <!--  for문  -->
+    <table border=1>
+        {% for key, value in info.items() %}
+        <tr>
+            <th>{{key}}</th>
+            <th>{{value}}</th>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
